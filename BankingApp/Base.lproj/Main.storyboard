@@ -96,12 +96,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCR-co-yIz">
-                                <rect key="frame" x="39" y="755" width="104" height="58"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCR-co-yIz">
+                                <rect key="frame" x="35" y="736" width="84" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0097506856550000007" green="0.1500660181" blue="0.3411953747" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="25"/>
-                                <state key="normal" title="Exit">
+                                <state key="normal" title="Exit" image="rsz_exit-removebg-preview">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -154,6 +152,9 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="resetMessage:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="w3Z-Do-mgQ"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Password" borderStyle="line" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0re-oz-G2l">
                                 <rect key="frame" x="42" y="248" width="330" height="55"/>
@@ -178,6 +179,7 @@
                                     <color key="titleShadowColor" systemColor="systemBackgroundColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O68-T2-2Xn"/>
                                     <segue destination="e0l-Dp-RsO" kind="presentation" identifier="SignIn" animates="NO" modalPresentationStyle="fullScreen" id="QHi-GC-V0v"/>
                                 </connections>
                             </button>
@@ -202,9 +204,17 @@
                                     <color key="titleShadowColor" systemColor="systemBackgroundColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="signup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3bp-Wf-eD0"/>
                                     <segue destination="Zd9-Wn-HAk" kind="presentation" identifier="Signup" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="6SL-Eq-A6q"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="85t-pZ-Fd4">
+                                <rect key="frame" x="55" y="449" width="317" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.1218396511" green="0.43429614919999998" blue="0.74854274610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -233,6 +243,7 @@
                     <connections>
                         <outlet property="Pword" destination="0re-oz-G2l" id="d2E-ow-8xh"/>
                         <outlet property="Uname" destination="adH-Yw-sWa" id="x0n-jD-a0g"/>
+                        <outlet property="loginmessage" destination="85t-pZ-Fd4" id="Jjo-kX-JIg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -584,11 +595,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Qnd-Uc-Zr4"/>
-        <segue reference="jMa-Qa-75A"/>
-        <segue reference="NzI-4w-W2h"/>
+        <segue reference="zHz-Be-Igd"/>
+        <segue reference="awe-cC-kBz"/>
+        <segue reference="QHi-GC-V0v"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="rsz_exit-removebg-preview" width="87" height="87"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -600,6 +612,9 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
