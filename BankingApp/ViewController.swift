@@ -55,7 +55,6 @@ class ViewController: UIViewController {
         print ("initializing")
         var logintext = AccountLogin.readUserAccounts(loginAccount: accountLogin)
         Helpers.convertTextToUsers(text: logintext , loginAccount: &accountLogin);
-    
        
     }
     

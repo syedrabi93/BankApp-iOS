@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		911416442575360400D7585A /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911416432575360400D7585A /* DeleteAccountViewController.swift */; };
 		9167D67E256F668600B3C21B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9167D67D256F668600B3C21B /* AppDelegate.swift */; };
 		9167D680256F668600B3C21B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9167D67F256F668600B3C21B /* SceneDelegate.swift */; };
 		9167D682256F668600B3C21B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9167D681256F668600B3C21B /* ViewController.swift */; };
@@ -21,6 +22,13 @@
 		91DCF17025737E53002C8E33 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCF16F25737E53002C8E33 /* FileReader.swift */; };
 		91DCF17525739A49002C8E33 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCF17425739A49002C8E33 /* LoggedInViewController.swift */; };
 		91DCF17A25739B4B002C8E33 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCF17925739B4B002C8E33 /* SignupViewController.swift */; };
+		91E660B62575208B00E2161C /* AccountSummryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E660B22575208B00E2161C /* AccountSummryCell.swift */; };
+		91E660B72575208B00E2161C /* BankingOptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E660B32575208B00E2161C /* BankingOptionsController.swift */; };
+		91E660B82575208B00E2161C /* AccountSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E660B42575208B00E2161C /* AccountSummaryView.swift */; };
+		91E660B92575208B00E2161C /* DepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E660B52575208B00E2161C /* DepositViewController.swift */; };
+		91E660BE2575272B00E2161C /* PayutilsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E660BD2575272B00E2161C /* PayutilsViewController.swift */; };
+		91E660C3257528E300E2161C /* UpdatePersonalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E660C2257528E300E2161C /* UpdatePersonalsViewController.swift */; };
+		91E660CB2575339A00E2161C /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E660CA2575339A00E2161C /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		911416432575360400D7585A /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
 		9167D67A256F668600B3C21B /* BankingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9167D67D256F668600B3C21B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9167D67F256F668600B3C21B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +70,13 @@
 		91DCF16F25737E53002C8E33 /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
 		91DCF17425739A49002C8E33 /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		91DCF17925739B4B002C8E33 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		91E660B22575208B00E2161C /* AccountSummryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSummryCell.swift; sourceTree = "<group>"; };
+		91E660B32575208B00E2161C /* BankingOptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankingOptionsController.swift; sourceTree = "<group>"; };
+		91E660B42575208B00E2161C /* AccountSummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSummaryView.swift; sourceTree = "<group>"; };
+		91E660B52575208B00E2161C /* DepositViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepositViewController.swift; sourceTree = "<group>"; };
+		91E660BD2575272B00E2161C /* PayutilsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayutilsViewController.swift; sourceTree = "<group>"; };
+		91E660C2257528E300E2161C /* UpdatePersonalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePersonalsViewController.swift; sourceTree = "<group>"; };
+		91E660CA2575339A00E2161C /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +127,18 @@
 		9167D67C256F668600B3C21B /* BankingApp */ = {
 			isa = PBXGroup;
 			children = (
+				91E660B42575208B00E2161C /* AccountSummaryView.swift */,
+				91E660B22575208B00E2161C /* AccountSummryCell.swift */,
+				91E660B32575208B00E2161C /* BankingOptionsController.swift */,
+				91E660B52575208B00E2161C /* DepositViewController.swift */,
 				9167D67D256F668600B3C21B /* AppDelegate.swift */,
 				9167D67F256F668600B3C21B /* SceneDelegate.swift */,
 				91DCF15A2573714D002C8E33 /* AccountLogin.swift */,
+				91E660CA2575339A00E2161C /* CreateAccountViewController.swift */,
+				911416432575360400D7585A /* DeleteAccountViewController.swift */,
+				91E660C2257528E300E2161C /* UpdatePersonalsViewController.swift */,
 				91DCF16F25737E53002C8E33 /* FileReader.swift */,
+				91E660BD2575272B00E2161C /* PayutilsViewController.swift */,
 				91DCF17925739B4B002C8E33 /* SignupViewController.swift */,
 				91DCF17425739A49002C8E33 /* LoggedInViewController.swift */,
 				91DCF16A25737A0C002C8E33 /* Helper.swift */,
@@ -124,10 +148,6 @@
 				9167D686256F668800B3C21B /* Assets.xcassets */,
 				9167D688256F668800B3C21B /* LaunchScreen.storyboard */,
 				9167D68B256F668800B3C21B /* Info.plist */,
-				93E01F792574BE280067940F /* BankingOptionsController.swift */,
-				93E01F7B2574C3930067940F /* DepositViewController.swift */,
-				93E01F7F2574DCA00067940F /* AccountSummryCell.swift */,
-				93E01F812574E0860067940F /* AccountSummaryView.swift */,
 			);
 			path = BankingApp;
 			sourceTree = "<group>";
@@ -280,16 +300,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				911416442575360400D7585A /* DeleteAccountViewController.swift in Sources */,
+				91E660B62575208B00E2161C /* AccountSummryCell.swift in Sources */,
+				91E660B82575208B00E2161C /* AccountSummaryView.swift in Sources */,
+				91E660C3257528E300E2161C /* UpdatePersonalsViewController.swift in Sources */,
+				91E660B92575208B00E2161C /* DepositViewController.swift in Sources */,
+				91E660CB2575339A00E2161C /* CreateAccountViewController.swift in Sources */,
+				91E660BE2575272B00E2161C /* PayutilsViewController.swift in Sources */,
 				91DCF17A25739B4B002C8E33 /* SignupViewController.swift in Sources */,
 				9167D682256F668600B3C21B /* ViewController.swift in Sources */,
 				91DCF163257374B8002C8E33 /* BankAccounts.swift in Sources */,
 				91DCF17025737E53002C8E33 /* FileReader.swift in Sources */,
-				93E01F822574E0860067940F /* AccountSummaryView.swift in Sources */,
-				93E01F7A2574BE280067940F /* BankingOptionsController.swift in Sources */,
 				9167D67E256F668600B3C21B /* AppDelegate.swift in Sources */,
 				91DCF15B2573714D002C8E33 /* AccountLogin.swift in Sources */,
+				91E660B72575208B00E2161C /* BankingOptionsController.swift in Sources */,
 				9167D680256F668600B3C21B /* SceneDelegate.swift in Sources */,
-				93E01F7C2574C3930067940F /* DepositViewController.swift in Sources */,
 				91DCF16B25737A0C002C8E33 /* Helper.swift in Sources */,
 				91DCF17525739A49002C8E33 /* LoggedInViewController.swift in Sources */,
 			);
