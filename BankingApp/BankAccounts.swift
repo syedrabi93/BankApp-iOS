@@ -29,6 +29,8 @@ class BankAccounts{
     }
     
     
+
+    
     
     
     
@@ -38,7 +40,7 @@ class BankAccounts{
     /* function to preload the customer details if the file is not empty
      * if not load the customer login data from from here (testing purpose)
      */
-    static func readBankAccounts (AllAccounts: [BankAccounts])-> String {
+    static func readBankAccounts ()-> [BankAccounts] {
         let file = "AccountDetails.txt" //this is the file. we will write to and read from it
         
         var text = """
@@ -50,7 +52,19 @@ class BankAccounts{
         if !textFromFile.isEmpty {
             text = textFromFile;
         }
-        return text
+        return Helpers.convertTextToAccounts(text: text);
+    }
+    
+    static func findAccountsByUsername(name: String) -> [BankAccounts] {
+        let AllAccounts = readBankAccounts();
+        print(AllAccounts)
+        var userAcc:[BankAccounts] = []
+        for acc in AllAccounts {
+            if(acc.clientID == name){
+                userAcc.append(acc)
+            }
+        }
+        return userAcc;
     }
     
     //Function to finally update the file with the data while leaving the application

@@ -16,6 +16,9 @@ class AccountLogin{
             self.username = username
             self.password = password
     }
+    
+    
+    static var currentUser: String?
     /* Function to validate the sign in for the given username and password
          * gets the user name and passwork on run time and validates if its a valid login
          * parameters: USertype

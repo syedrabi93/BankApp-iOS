@@ -14,12 +14,14 @@ class Helpers {
      * parameters : Tect to be converted
      * returns void
      */
-    static func convertTextToAccounts(text: String, AllAccounts: inout [BankAccounts]) -> Void {
+    static func convertTextToAccounts(text: String) -> [BankAccounts] {
+        var Allaccounts: [BankAccounts] = []
         let arr = text.split(separator: "\n");
         arr.forEach{
             let details = $0.split(separator: ",");
-            AllAccounts.append(BankAccounts(clientID: String(details[0]), accountType: String(details[1]), ClientName: String(details[2]), Contact: String(details[3]), accountNo: Int(String(details[4])) ?? 100000, currentBalance: (String(details[5]) as NSString).doubleValue,previousTransaction : (String(details[6]) as NSString).doubleValue))
+            Allaccounts.append(BankAccounts(clientID: String(details[0]), accountType: String(details[1]), ClientName: String(details[2]), Contact: String(details[3]), accountNo: Int(String(details[4])) ?? 100000, currentBalance: (String(details[5]) as NSString).doubleValue,previousTransaction : (String(details[6]) as NSString).doubleValue))
         }
+        return Allaccounts;
     }
 
     /*Function to convert the text read from the file or the preloaded text to the format     * required for the object type Account by sepreating it with the delimitter ","

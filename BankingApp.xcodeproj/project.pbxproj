@@ -124,6 +124,10 @@
 				9167D686256F668800B3C21B /* Assets.xcassets */,
 				9167D688256F668800B3C21B /* LaunchScreen.storyboard */,
 				9167D68B256F668800B3C21B /* Info.plist */,
+				93E01F792574BE280067940F /* BankingOptionsController.swift */,
+				93E01F7B2574C3930067940F /* DepositViewController.swift */,
+				93E01F7F2574DCA00067940F /* AccountSummryCell.swift */,
+				93E01F812574E0860067940F /* AccountSummaryView.swift */,
 			);
 			path = BankingApp;
 			sourceTree = "<group>";
@@ -280,9 +284,12 @@
 				9167D682256F668600B3C21B /* ViewController.swift in Sources */,
 				91DCF163257374B8002C8E33 /* BankAccounts.swift in Sources */,
 				91DCF17025737E53002C8E33 /* FileReader.swift in Sources */,
+				93E01F822574E0860067940F /* AccountSummaryView.swift in Sources */,
+				93E01F7A2574BE280067940F /* BankingOptionsController.swift in Sources */,
 				9167D67E256F668600B3C21B /* AppDelegate.swift in Sources */,
 				91DCF15B2573714D002C8E33 /* AccountLogin.swift in Sources */,
 				9167D680256F668600B3C21B /* SceneDelegate.swift in Sources */,
+				93E01F7C2574C3930067940F /* DepositViewController.swift in Sources */,
 				91DCF16B25737A0C002C8E33 /* Helper.swift in Sources */,
 				91DCF17525739A49002C8E33 /* LoggedInViewController.swift in Sources */,
 			);
@@ -462,6 +469,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BankingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,6 +488,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BankingApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
