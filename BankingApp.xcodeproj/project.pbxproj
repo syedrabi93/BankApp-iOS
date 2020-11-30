@@ -19,6 +19,8 @@
 		91DCF163257374B8002C8E33 /* BankAccounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCF162257374B8002C8E33 /* BankAccounts.swift */; };
 		91DCF16B25737A0C002C8E33 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCF16A25737A0C002C8E33 /* Helper.swift */; };
 		91DCF17025737E53002C8E33 /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCF16F25737E53002C8E33 /* FileReader.swift */; };
+		91DCF17525739A49002C8E33 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCF17425739A49002C8E33 /* LoggedInViewController.swift */; };
+		91DCF17A25739B4B002C8E33 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCF17925739B4B002C8E33 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		91DCF162257374B8002C8E33 /* BankAccounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccounts.swift; sourceTree = "<group>"; };
 		91DCF16A25737A0C002C8E33 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		91DCF16F25737E53002C8E33 /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
+		91DCF17425739A49002C8E33 /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
+		91DCF17925739B4B002C8E33 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				9167D67F256F668600B3C21B /* SceneDelegate.swift */,
 				91DCF15A2573714D002C8E33 /* AccountLogin.swift */,
 				91DCF16F25737E53002C8E33 /* FileReader.swift */,
+				91DCF17925739B4B002C8E33 /* SignupViewController.swift */,
+				91DCF17425739A49002C8E33 /* LoggedInViewController.swift */,
 				91DCF16A25737A0C002C8E33 /* Helper.swift */,
 				91DCF162257374B8002C8E33 /* BankAccounts.swift */,
 				9167D681256F668600B3C21B /* ViewController.swift */,
@@ -270,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91DCF17A25739B4B002C8E33 /* SignupViewController.swift in Sources */,
 				9167D682256F668600B3C21B /* ViewController.swift in Sources */,
 				91DCF163257374B8002C8E33 /* BankAccounts.swift in Sources */,
 				91DCF17025737E53002C8E33 /* FileReader.swift in Sources */,
@@ -277,6 +284,7 @@
 				91DCF15B2573714D002C8E33 /* AccountLogin.swift in Sources */,
 				9167D680256F668600B3C21B /* SceneDelegate.swift in Sources */,
 				91DCF16B25737A0C002C8E33 /* Helper.swift in Sources */,
+				91DCF17525739A49002C8E33 /* LoggedInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

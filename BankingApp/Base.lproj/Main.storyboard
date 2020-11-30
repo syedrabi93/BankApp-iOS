@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Logged In View Controller-->
         <scene sceneID="WeY-bh-r4J">
             <objects>
-                <viewController id="e0l-Dp-RsO" sceneMemberID="viewController">
+                <viewController id="e0l-Dp-RsO" customClass="LoggedInViewController" customModule="BankingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FcF-2Q-jaW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,6 +36,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="ViewSummary:" destination="e0l-Dp-RsO" eventType="touchUpInside" id="nr8-sW-qEG"/>
                                     <segue destination="pIV-H1-Ks2" kind="presentation" identifier="Summary" animates="NO" modalPresentationStyle="fullScreen" id="zHz-Be-Igd"/>
                                 </connections>
                             </button>
@@ -48,6 +49,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="TransferAmount:" destination="e0l-Dp-RsO" eventType="touchUpInside" id="b2z-m1-Ygo"/>
                                     <segue destination="Jv1-Ej-jrt" kind="presentation" identifier="transfer" modalPresentationStyle="fullScreen" id="tTw-XB-LZZ"/>
                                 </connections>
                             </button>
@@ -59,6 +61,9 @@
                                 <state key="normal" title="Pay Utility bills">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="Paybills:" destination="e0l-Dp-RsO" eventType="touchUpInside" id="XSa-Hi-HqN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUv-fA-XXp">
                                 <rect key="frame" x="39" y="502" width="337" height="58"/>
@@ -68,6 +73,9 @@
                                 <state key="normal" title="Update personal details">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="Updatepersonals:" destination="e0l-Dp-RsO" eventType="touchUpInside" id="8EN-z6-xPJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJ1-cP-mao">
                                 <rect key="frame" x="41" y="588" width="337" height="58"/>
@@ -77,6 +85,9 @@
                                 <state key="normal" title="Create New Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="CreateAccount:" destination="e0l-Dp-RsO" eventType="touchUpInside" id="sJi-i3-yOp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNe-gV-UN6">
                                 <rect key="frame" x="41" y="337" width="337" height="58"/>
@@ -86,6 +97,9 @@
                                 <state key="normal" title="Deposit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="Deposit:" destination="e0l-Dp-RsO" eventType="touchUpInside" id="8kj-jz-Wjd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfX-H6-Oju">
                                 <rect key="frame" x="39" y="670" width="337" height="58"/>
@@ -95,6 +109,9 @@
                                 <state key="normal" title="Delete Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="DeleteAccount:" destination="e0l-Dp-RsO" eventType="touchUpInside" id="vnJ-kj-NeW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCR-co-yIz">
                                 <rect key="frame" x="35" y="736" width="84" height="96"/>
@@ -250,10 +267,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Signup View Controller-->
         <scene sceneID="HsF-uS-sGW">
             <objects>
-                <viewController id="Zd9-Wn-HAk" sceneMemberID="viewController">
+                <viewController id="Zd9-Wn-HAk" customClass="SignupViewController" customModule="BankingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p6X-64-GbH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -330,6 +347,9 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="CreateAccount:" destination="Zd9-Wn-HAk" eventType="touchUpInside" id="TNw-m9-nIo"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0Je-26-ozj">
                                 <rect key="frame" x="213" y="311" width="163" height="32"/>
@@ -370,6 +390,13 @@
                         <color key="backgroundColor" red="0.1218396511" green="0.43429614919999998" blue="0.74854274610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="SN7-iK-1KH"/>
+                    <connections>
+                        <outlet property="AccountType" destination="0Je-26-ozj" id="9ow-eb-R1n"/>
+                        <outlet property="CustContact" destination="ekr-7c-FeD" id="PHm-Eg-PPH"/>
+                        <outlet property="Password" destination="dn4-Tx-1RX" id="Eni-q2-yWh"/>
+                        <outlet property="UserName" destination="ZSa-Dq-a6K" id="Utc-aj-A8Z"/>
+                        <outlet property="custName" destination="Po7-p4-XPW" id="ka7-gU-8eG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKY-VI-ti5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -596,7 +623,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="zHz-Be-Igd"/>
-        <segue reference="awe-cC-kBz"/>
+        <segue reference="jMa-Qa-75A"/>
         <segue reference="QHi-GC-V0v"/>
     </inferredMetricsTieBreakers>
     <resources>
