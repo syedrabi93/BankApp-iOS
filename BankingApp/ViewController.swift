@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     
     
-    @IBOutlet weak var loginmessage: UITextField!
+   
     @IBOutlet weak var Uname: UITextField!
     @IBOutlet weak var Pword: UITextField!
     override func viewDidLoad() {
@@ -35,10 +35,12 @@ class ViewController: UIViewController {
         let password = Pword.text
         let userAccount = AccountLogin.checkSignIn(username:username! , password:password!)
         if(userAccount == nil || username == "" || password == ""){
-            loginmessage.text = "Invalid credentials. Try Again"
             
-            let yourVariable = storyboard!.instantiateViewController(withIdentifier: "mainview" )
-            self.present(yourVariable, animated: false, completion: nil)
+            let alertController = UIAlertController(title: "Login Error", message: "Invalid Username or Password", preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            Uname.text = ""
+            Pword.text = ""
             
         } else {
             AccountLogin.currentUser = Uname.text;
@@ -50,9 +52,7 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func resetMessage(_ sender: Any) {
-        loginmessage.text = ""
-    }
+   
     
     
     

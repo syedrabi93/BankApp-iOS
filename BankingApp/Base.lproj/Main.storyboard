@@ -126,7 +126,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="exit" animates="NO" modalPresentationStyle="fullScreen" id="awe-cC-kBz"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="exit" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="awe-cC-kBz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -291,9 +291,6 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="resetMessage:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="w3Z-Do-mgQ"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Password" borderStyle="line" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0re-oz-G2l">
                                 <rect key="frame" x="42" y="248" width="330" height="55"/>
@@ -382,7 +379,6 @@
                     <connections>
                         <outlet property="Pword" destination="0re-oz-G2l" id="d2E-ow-8xh"/>
                         <outlet property="Uname" destination="adH-Yw-sWa" id="x0n-jD-a0g"/>
-                        <outlet property="loginmessage" destination="85t-pZ-Fd4" id="Jjo-kX-JIg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -946,8 +942,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OeU-Ml-fXX">
-                                                    <rect key="frame" x="98" y="29" width="79" height="34"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OeU-Ml-fXX">
+                                                    <rect key="frame" x="92" y="29" width="79" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="fX6-MW-bpA"/>
                                                         <constraint firstAttribute="width" constant="79" id="yoV-Oe-qax"/>
@@ -956,7 +952,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gKf-oh-e3V">
-                                                    <rect key="frame" x="98" y="89" width="79" height="34"/>
+                                                    <rect key="frame" x="92" y="89" width="79" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="TpT-dI-2Xa"/>
                                                         <constraint firstAttribute="width" constant="79" id="quf-pv-RnQ"/>
@@ -964,8 +960,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4EU-s8-VWy">
-                                                    <rect key="frame" x="298" y="29" width="79" height="34"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4EU-s8-VWy">
+                                                    <rect key="frame" x="305" y="29" width="79" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="lq7-g5-EM2"/>
                                                     </constraints>
@@ -973,7 +969,7 @@
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BPr-en-3n4">
-                                                    <rect key="frame" x="298" y="90" width="79" height="34"/>
+                                                    <rect key="frame" x="308" y="90" width="79" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -1123,8 +1119,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jMa-Qa-75A"/>
-        <segue reference="fTF-ZT-gsx"/>
+        <segue reference="awe-cC-kBz"/>
+        <segue reference="QHi-GC-V0v"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="rsz_exit-removebg-preview" width="87" height="87"/>
