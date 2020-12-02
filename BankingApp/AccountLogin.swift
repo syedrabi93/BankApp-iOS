@@ -19,14 +19,16 @@ class AccountLogin{
     
     
     static var currentUser: String?
+    
     /* Function to validate the sign in for the given username and password
          * gets the user name and passwork on run time and validates if its a valid login
          * parameters: USertype
          * returns void
          */
-    static func checkSignIn(username:String , password:String ,loginAccount: [AccountLogin]) -> AccountLogin? {
+    static func checkSignIn(username:String , password:String ) -> AccountLogin? {
+        let Alllogins = readUserAccounts();
             var currentUser: AccountLogin? = nil;
-            for user in loginAccount {
+            for user in Alllogins {
                 if user.password == password && user.username == username {
                     currentUser = user;
                     break;
@@ -37,7 +39,7 @@ class AccountLogin{
     /* function to preload the user details if the file is not empty
          * if not load the customer login data from from here (testing purpose)
          */
-        static func readUserAccounts (loginAccount: [AccountLogin]) -> String {
+        static func readUserAccounts () -> [AccountLogin] {
             let fileName = "Users.txt";
             var text = """
             Syed,test1
@@ -49,7 +51,7 @@ class AccountLogin{
             if !textFromFile.isEmpty {
                 text = textFromFile;
             }
-            return text
+            return Helpers.convertTextToUsers(text: text)
             
             
         }
@@ -59,8 +61,9 @@ class AccountLogin{
         static func saveUserAccounts (account: [AccountLogin]) -> Void {
             var text = "";
             for user in account {
-                text.append(contentsOf: "\(user.username),\(user.password),\n") ;
+                text.append(contentsOf: "\(user.username),\(user.password)\n") ;
             }
+            print (text)
             FileReader.saveToFile(fileName: "Users.txt", content: text);
             
         }

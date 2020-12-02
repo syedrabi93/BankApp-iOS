@@ -20,11 +20,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var Pword: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialize()
         // Do any additional setup after loading the view.
     }
 
     @IBAction func signup(_ sender: Any) {
+        performSegue(withIdentifier: "SignUp", sender: self)
     }
     
    
@@ -33,13 +33,16 @@ class ViewController: UIViewController {
     @IBAction func login(_ sender: Any) {
         let username = Uname.text
         let password = Pword.text
-        let userAccount = AccountLogin.checkSignIn(username:username! , password:password! ,loginAccount: accountLogin)
-        if(userAccount == nil){
+        let userAccount = AccountLogin.checkSignIn(username:username! , password:password!)
+        if(userAccount == nil || username == "" || password == ""){
             loginmessage.text = "Invalid credentials. Try Again"
-            print("Invalid credentials. Try Again")
+            
+            let yourVariable = storyboard!.instantiateViewController(withIdentifier: "mainview" )
+            self.present(yourVariable, animated: false, completion: nil)
+            
         } else {
             AccountLogin.currentUser = Uname.text;
-            print("Successfully Signed In");
+            performSegue(withIdentifier: "SignIn", sender: self)
         }
     }
     
@@ -51,12 +54,6 @@ class ViewController: UIViewController {
         loginmessage.text = ""
     }
     
-    func initialize(){
-        print ("initializing")
-        var logintext = AccountLogin.readUserAccounts(loginAccount: accountLogin)
-        Helpers.convertTextToUsers(text: logintext , loginAccount: &accountLogin);
-       
-    }
     
     
 }

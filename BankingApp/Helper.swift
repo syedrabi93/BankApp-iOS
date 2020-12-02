@@ -28,12 +28,15 @@ class Helpers {
      * parameters : Tect to be converted
      * returns void
      */
-    static func convertTextToUsers(text: String, loginAccount: inout [AccountLogin]) -> Void {
+    static func convertTextToUsers(text: String) -> [AccountLogin] {
+        var Alllogins: [AccountLogin] = []
+        print (text)
         let arr = text.split(separator: "\n");
         arr.forEach{
             let details = $0.split(separator: ",");
-            loginAccount.append(AccountLogin(username: String(details[0]), password: String(details[1])));
+            Alllogins.append(AccountLogin(username: String(details[0]), password: String(details[1])));
         }
+        return Alllogins
     }
 
 

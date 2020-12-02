@@ -67,6 +67,21 @@ class BankAccounts{
         return userAcc;
     }
     
+    static func generateAccountNum() -> Int{
+        let AllAccounts = readBankAccounts();
+               var randNum = 0;
+               while true {
+                   let generatedNum = Int(drand48() * 10000 + 10000);
+                   let index = AllAccounts.firstIndex(where: {$0.accountNo == generatedNum});
+                   if index == nil {
+                       randNum = generatedNum;
+                       break;
+                       
+                   }
+               }
+               return randNum;
+           }
+    
     //Function to finally update the file with the data while leaving the application
     //loads the data from objects to the file for permanent storage
     static func saveAccounts (AllAccounts: [BankAccounts])-> Void {
@@ -74,7 +89,7 @@ class BankAccounts{
         for account in AllAccounts {
             text.append(contentsOf: "\(account.clientID),\(account.accountType),\(account.ClientName),\(account.Contact),\(account.accountNo),\(account.currentBalance),\(account.previousTransaction)\n") ;
         }
-        
+        print(text)
         FileReader.saveToFile(fileName: "AccountDetails.txt", content: text);
     }
     

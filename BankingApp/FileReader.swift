@@ -17,6 +17,7 @@ class FileReader {
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
 
             let fileURL = dir.appendingPathComponent(fileName);
+            print (fileURL)
             
             //writing
             do {
