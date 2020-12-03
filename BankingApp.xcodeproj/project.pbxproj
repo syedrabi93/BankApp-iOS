@@ -29,6 +29,8 @@
 		91E660BE2575272B00E2161C /* PayutilsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E660BD2575272B00E2161C /* PayutilsViewController.swift */; };
 		91E660C3257528E300E2161C /* UpdatePersonalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E660C2257528E300E2161C /* UpdatePersonalsViewController.swift */; };
 		91E660CB2575339A00E2161C /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E660CA2575339A00E2161C /* CreateAccountViewController.swift */; };
+		931722BB2578C15E00B9868D /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931722BA2578C15E00B9868D /* AlertManager.swift */; };
+		931722BD2578C43300B9868D /* TransferAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931722BC2578C43300B9868D /* TransferAmountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		91E660BD2575272B00E2161C /* PayutilsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayutilsViewController.swift; sourceTree = "<group>"; };
 		91E660C2257528E300E2161C /* UpdatePersonalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatePersonalsViewController.swift; sourceTree = "<group>"; };
 		91E660CA2575339A00E2161C /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		931722BA2578C15E00B9868D /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		931722BC2578C43300B9868D /* TransferAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferAmountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 				9167D686256F668800B3C21B /* Assets.xcassets */,
 				9167D688256F668800B3C21B /* LaunchScreen.storyboard */,
 				9167D68B256F668800B3C21B /* Info.plist */,
+				931722BA2578C15E00B9868D /* AlertManager.swift */,
+				931722BC2578C43300B9868D /* TransferAmountViewController.swift */,
 			);
 			path = BankingApp;
 			sourceTree = "<group>";
@@ -232,6 +238,10 @@
 		9167D672256F668500B3C21B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+					2,
+				);
 				LastSwiftUpdateCheck = 1220;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
@@ -308,6 +318,8 @@
 				91E660CB2575339A00E2161C /* CreateAccountViewController.swift in Sources */,
 				91E660BE2575272B00E2161C /* PayutilsViewController.swift in Sources */,
 				91DCF17A25739B4B002C8E33 /* SignupViewController.swift in Sources */,
+				931722BB2578C15E00B9868D /* AlertManager.swift in Sources */,
+				931722BD2578C43300B9868D /* TransferAmountViewController.swift in Sources */,
 				9167D682256F668600B3C21B /* ViewController.swift in Sources */,
 				91DCF163257374B8002C8E33 /* BankAccounts.swift in Sources */,
 				91DCF17025737E53002C8E33 /* FileReader.swift in Sources */,

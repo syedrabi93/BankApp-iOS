@@ -15,7 +15,18 @@ class CreateAccountViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBOutlet weak var accnumber: UITextField!
+    
+    @IBOutlet weak var segment: UISegmentedControl!
+    
+    @IBAction func create(_ sender: Any) {
+        let index = segment.selectedSegmentIndex
+        let type = segment.titleForSegment(at: index);
+        let account = Int(accnumber.text!);
+        let msg = BankAccounts.createAccount(type: type!, accNumber: account!);
+        AlertManager.showAlert(title: "Create New Account", msg: msg, sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -1,19 +1,20 @@
 //
-//  DepositViewController.swift
+//  TransferAmountViewController.swift
 //  BankingApp
 //
-//  Created by Adarshdeep Singh on 30/11/20.
+//  Created by Adarshdeep Singh on 03/12/20.
 //
 
 import UIKit
 
-class DepositViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class TransferAmountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return accounts.count
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -22,28 +23,35 @@ class DepositViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     var accounts: [BankAccounts] = [];
     
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         accounts = BankAccounts.findAccountsByUsername(name: AccountLogin.currentUser!);
-              accountNumbers.dataSource = self
-              accountNumbers.delegate = self
+        accountNumbers.dataSource = self
+        accountNumbers.delegate = self
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var accountNumbers: UIPickerView!
-    
     @IBOutlet weak var amount: UITextField!
     
-    @IBAction func buttonClick(_ sender: Any) {
+    @IBOutlet weak var destAccount: UITextField!
+ 
+    
+    @IBOutlet weak var accountNumbers: UIPickerView!
+    
+    
+    @IBAction func transferMoney(_ sender: Any) {
         
-        let amountVal = Double(amount.text ?? "0")!;
-        
-        let accNum = accounts[accountNumbers.selectedRow(inComponent: 0)].accountNo;
-        let msg = BankAccounts.depositMoney(accNum: accNum, amount: amountVal);
-        AlertManager.showAlert(title: "Deposit Amount", msg: msg, sender: self)
+        let toAccount = Int(destAccount.text ?? "0")!
+        let amountTo = Double(amount.text ?? "0")!;
+        let fromAccount = (accounts[accountNumbers.selectedRow(inComponent: 0)]).accountNo;
+        print(fromAccount, "fromAcc");
+        let msg = BankAccounts.transferAmount(accNum1: fromAccount, accNum2: toAccount, amount: amountTo)
+        AlertManager.showAlert(title: "TransferAmount", msg: msg, sender: self);
         
     }
+    
     
     /*
     // MARK: - Navigation

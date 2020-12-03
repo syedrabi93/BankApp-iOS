@@ -11,11 +11,21 @@ class UpdatePeronalsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let userAcc = BankAccounts.findAccountsByUsername(name: AccountLogin.currentUser!);
+        print("View Did load Called")
+        name.text = userAcc[0].ClientName;
+        contact.text = userAcc[0].Contact;
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func update(_ sender: Any) {
+        let msg = BankAccounts.updateDetails(name: name.text!, contact: contact.text!)
+        AlertManager.showAlert(title: "Update Details", msg: msg, sender: self)
+    }
+    @IBOutlet weak var name: UITextField!
+    
+    @IBOutlet weak var contact: UITextField!
     /*
     // MARK: - Navigation
 
