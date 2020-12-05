@@ -28,15 +28,6 @@ class BankAccounts{
         self.previousTransaction = previousTransaction
     }
     
-    
-
-    
-    
-    
-    
-    
-    
-    
     /* function to preload the customer details if the file is not empty
      * if not load the customer login data from from here (testing purpose)
      */
@@ -56,7 +47,8 @@ class BankAccounts{
     }
     
     
-    
+    //method to fin the account details for the given user name
+    //Takes user name as input and returns the corresponding object
     static func findAccountsByUsername(name: String) -> [BankAccounts] {
         let AllAccounts = readBankAccounts();
       
@@ -69,6 +61,8 @@ class BankAccounts{
         return userAcc;
     }
     
+    //Method to find account details based on the given account number
+    //Takes account number as input and returns the corresponding object
     static func findByAccountNum(allAccounts:[BankAccounts],num: Int) -> BankAccounts? {
         var acc: BankAccounts?;
         for account in allAccounts {
@@ -80,6 +74,7 @@ class BankAccounts{
         return acc;
     }
     
+    //Method to delete the account based on the account number passed.removes the object from the object list
     static func deleteAccount(accNum: Int)-> String {
         var allAccounts = readBankAccounts();
         let index = allAccounts.firstIndex(where: { $0 .accountNo == accNum});
@@ -90,6 +85,7 @@ class BankAccounts{
         saveAccounts(AllAccounts: allAccounts);
         return "Account No. \(accNum) deleted";
     }
+    
     
     static func createAccount(type: String, accNumber: Int) -> String{
         var accs = readBankAccounts();
@@ -136,7 +132,7 @@ class BankAccounts{
             
         }
         account!.currentBalance = account!.currentBalance - amount;
-        account!.previousTransaction = amount;
+        account!.previousTransaction = -amount;
         saveAccounts(AllAccounts: allAccounts);
         return "Paid $\(amount) for utility \(util)"
     }
@@ -148,7 +144,7 @@ class BankAccounts{
             return "Couldn't Find Account";
         }
         acc!.currentBalance = acc!.currentBalance + amount;
-        acc!.previousTransaction = amount;
+        acc!.previousTransaction = +amount;
         saveAccounts(AllAccounts: allAccounts);
         return "Amount $\(amount) deposited to Account \(accNum)"
     }
@@ -172,7 +168,7 @@ class BankAccounts{
         
         toAccount!.currentBalance = toAccount!.currentBalance + amount;
         fromAccount?.previousTransaction = amount;
-        toAccount?.previousTransaction = amount;
+        toAccount?.previousTransaction = -amount;
         saveAccounts(AllAccounts: allAccounts);
         return "Amount $\(amount) Transferred to \(toAccount?.ClientName ?? "")";
         

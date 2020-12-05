@@ -16,7 +16,6 @@ class SignupViewController: UIViewController {
     var accountType:String = ""
     @IBOutlet weak var UserName: UITextField!
     @IBOutlet weak var Password: UITextField!
-    @IBOutlet weak var message: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,14 +42,14 @@ class SignupViewController: UIViewController {
         for user in Allaccounts
         {
             if user.clientID == UserName.text && user.ClientName == custName.text {
-                message.text = "User already Exit. Try login"
+                AlertManager.showAlert(title: "Sign Up", msg:"User already Exist.Try login with correct password", sender: self);
                 status = true
             }
         }
         if (UserName.text == "" || Password.text == "" || custName.text == "" || CustContact.text == "" )
         {
             print ("check here")
-            message.text = "No fields can be empty"
+            AlertManager.showAlert(title: "Sign Up", msg:"All fields are mandatory", sender: self);
             status = true
         }
         if  status != true
@@ -61,7 +60,7 @@ class SignupViewController: UIViewController {
             print(Allaccounts)
             AccountLogin.saveUserAccounts(account: Alllogins)
             BankAccounts.saveAccounts(AllAccounts: Allaccounts)
-            message.text = "Account created succesfully"
+            AlertManager.showAlert(title: "Sign Up", msg:"Account created successfully. Login to start transactions", sender: self);
         }
     
     }

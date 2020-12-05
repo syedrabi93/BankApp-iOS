@@ -45,8 +45,6 @@ class AccountLogin{
             var text = """
             Syed,test1
             Adarsh,test2
-            Kaur,test3
-            Wajeeh,test4
             """;
             let textFromFile = FileReader.readFromFile(fileName: fileName);
             if !textFromFile.isEmpty {
