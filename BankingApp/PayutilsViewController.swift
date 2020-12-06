@@ -35,6 +35,7 @@ class PayutilsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var accounts: [BankAccounts] = [];
     override func viewDidLoad() {
         super.viewDidLoad()
+        // fill accounts with current users account list
         accounts = BankAccounts.findAccountsByUsername(name: AccountLogin.currentUser!);
                accountNumbers.dataSource = self
                accountNumbers.delegate = self
@@ -44,10 +45,20 @@ class PayutilsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         // Do any additional setup after loading the view.
     }
+    
+    
+    // payutility function to handle payment of utilities
     @IBAction func payUtility(_ sender: Any) {
         
         let accountNum = accounts[accountNumbers.selectedRow(inComponent: 0)].accountNo;
-        let amountVal = Double(amount.text ?? "0")!;
+        var amountVal: Double = 0;
+        do {
+            amountVal = try Helpers.readDouble(field: amount)
+        }catch {
+            return AlertManager.showAlert(title: "Pay Utilities", msg: "Invalid Amount Entered", sender: self)
+        }
+        
+        
         let utilityName = utilities[utilitiesPicker.selectedRow(inComponent: 0)];
         let msg = BankAccounts.payUtility(acc: accountNum, util: utilityName, amount: amountVal)
         

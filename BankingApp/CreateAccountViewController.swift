@@ -11,7 +11,11 @@ class CreateAccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Generate account number
+        let generatedAcc = BankAccounts.generateAccountNum();
+        // fill the input with account number
+        accnumber.text = "\(generatedAcc)";
         // Do any additional setup after loading the view.
     }
     
@@ -20,6 +24,10 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var segment: UISegmentedControl!
     
     @IBAction func create(_ sender: Any) {
+        
+        // on click of create account button
+        // get the type of account and create it
+        
         let index = segment.selectedSegmentIndex
         let type = segment.titleForSegment(at: index);
         let account = Int(accnumber.text!);

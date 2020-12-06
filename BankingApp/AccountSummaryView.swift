@@ -33,8 +33,7 @@ class AccountSummaryView: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self;
         tableView.delegate = self;
         accounts = BankAccounts.findAccountsByUsername(name: AccountLogin.currentUser!)
-        
-        print(accounts)
+     
         // Do any additional setup after loading the view.
     }
     

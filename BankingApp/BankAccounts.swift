@@ -86,7 +86,7 @@ class BankAccounts{
         return "Account No. \(accNum) deleted";
     }
     
-    
+    // Method to create a new account based type and account number passed
     static func createAccount(type: String, accNumber: Int) -> String{
         var accs = readBankAccounts();
         let acc = findByAccountNum(allAccounts: accs, num: accNumber);
@@ -101,6 +101,8 @@ class BankAccounts{
     }
     
     
+    
+    // Function to update current User Details
     static func updateDetails(name: String, contact: String)-> String {
         let user = AccountLogin.currentUser;
         if(user == nil){
@@ -122,6 +124,8 @@ class BankAccounts{
         return "Details Updated";
     }
     
+    
+    // This Function handles Payment for pay Utilities
     static func payUtility(acc: Int,util: String, amount: Double) -> String{
         
         let allAccounts = readBankAccounts();
@@ -137,6 +141,7 @@ class BankAccounts{
         return "Paid $\(amount) for utility \(util)"
     }
     
+    // Function takes care of depositing money to user account
     static func depositMoney (accNum: Int,amount: Double) -> String {
          let allAccounts = readBankAccounts();
         let acc = findByAccountNum(allAccounts: allAccounts, num: accNum);
@@ -149,6 +154,9 @@ class BankAccounts{
         return "Amount $\(amount) deposited to Account \(accNum)"
     }
     
+    
+    // Function takes 2 accounts and transfers money from
+    // one account to another account
     static func transferAmount(accNum1: Int, accNum2: Int, amount: Double) -> String {
         let allAccounts = readBankAccounts();
         let fromAccount = findByAccountNum(allAccounts: allAccounts, num: accNum1);
@@ -173,7 +181,7 @@ class BankAccounts{
         return "Amount $\(amount) Transferred to \(toAccount?.ClientName ?? "")";
         
     }
-    
+    // function takes care of generating a new account number
     static func generateAccountNum() -> Int{
         let AllAccounts = readBankAccounts();
                var randNum = 0;

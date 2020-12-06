@@ -34,6 +34,9 @@ class SignupViewController: UIViewController {
         }
         
     }
+    
+    // clicking on create account button results in calling of
+    // this function it will create user account and save it back to filesystem
     @IBAction func CreateAccount(_ sender: Any) {
         var Alllogins = AccountLogin.readUserAccounts();
         var Allaccounts = BankAccounts.readBankAccounts()
@@ -55,7 +58,7 @@ class SignupViewController: UIViewController {
         if  status != true
         {
             Alllogins.append(AccountLogin(username: UserName.text!, password: Password.text!))
-            Allaccounts.append(BankAccounts(clientID: custName.text!, accountType: AccountType.titleForSegment(at: AccountType.selectedSegmentIndex)!, ClientName: custName.text!, Contact: CustContact.text!, accountNo: BankAccounts.generateAccountNum(), currentBalance: 0.0, previousTransaction: 0.0))
+            Allaccounts.append(BankAccounts(clientID: UserName.text!, accountType: AccountType.titleForSegment(at: AccountType.selectedSegmentIndex)!, ClientName: custName.text!, Contact: CustContact.text!, accountNo: BankAccounts.generateAccountNum(), currentBalance: 0.0, previousTransaction: 0.0))
             print(Alllogins)
             print(Allaccounts)
             AccountLogin.saveUserAccounts(account: Alllogins)

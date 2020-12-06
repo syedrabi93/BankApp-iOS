@@ -7,6 +7,9 @@
 
 import UIKit
 
+
+
+
 class DepositViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -36,8 +39,13 @@ class DepositViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBOutlet weak var amount: UITextField!
     
     @IBAction func buttonClick(_ sender: Any) {
-        
-        let amountVal = Double(amount.text ?? "0")!;
+          
+        var amountVal: Double = 0;
+        do {
+            amountVal = try Helpers.readDouble(field: amount)
+        }catch {
+            return AlertManager.showAlert(title: "Deposit Amount", msg: "Invalid Amount Entered", sender: self)
+        }
         
         let accNum = accounts[accountNumbers.selectedRow(inComponent: 0)].accountNo;
         let msg = BankAccounts.depositMoney(accNum: accNum, amount: amountVal);

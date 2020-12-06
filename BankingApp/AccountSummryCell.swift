@@ -20,7 +20,7 @@ class AccountSummryCell: UITableViewCell {
     @IBOutlet weak var balance: UITextField!
     @IBOutlet weak var accountnumber: UITextField!
     
-    
+    // initializing table view cell with initial values
     func initialize(accountNumber: Int, balance: Double, type: String, transaction: Double){
         
         self.accountnumber.text = String(accountNumber);

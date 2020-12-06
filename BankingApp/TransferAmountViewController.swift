@@ -44,10 +44,15 @@ class TransferAmountViewController: UIViewController, UIPickerViewDelegate, UIPi
     @IBAction func transferMoney(_ sender: Any) {
         
         let toAccount = Int(destAccount.text ?? "0")!
-        let amountTo = Double(amount.text ?? "0")!;
+        var amountVal: Double = 0;
+        do {
+            amountVal = try Helpers.readDouble(field: amount)
+        }catch {
+            return AlertManager.showAlert(title: "Pay Utilities", msg: "Invalid Amount Entered", sender: self)
+        }
         let fromAccount = (accounts[accountNumbers.selectedRow(inComponent: 0)]).accountNo;
         print(fromAccount, "fromAcc");
-        let msg = BankAccounts.transferAmount(accNum1: fromAccount, accNum2: toAccount, amount: amountTo)
+        let msg = BankAccounts.transferAmount(accNum1: fromAccount, accNum2: toAccount, amount: amountVal)
         AlertManager.showAlert(title: "TransferAmount", msg: msg, sender: self);
         
     }

@@ -23,7 +23,6 @@
 		91DCF17525739A49002C8E33 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCF17425739A49002C8E33 /* LoggedInViewController.swift */; };
 		91DCF17A25739B4B002C8E33 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCF17925739B4B002C8E33 /* SignupViewController.swift */; };
 		91E660B62575208B00E2161C /* AccountSummryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E660B22575208B00E2161C /* AccountSummryCell.swift */; };
-		91E660B72575208B00E2161C /* BankingOptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E660B32575208B00E2161C /* BankingOptionsController.swift */; };
 		91E660B82575208B00E2161C /* AccountSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E660B42575208B00E2161C /* AccountSummaryView.swift */; };
 		91E660B92575208B00E2161C /* DepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E660B52575208B00E2161C /* DepositViewController.swift */; };
 		91E660BE2575272B00E2161C /* PayutilsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E660BD2575272B00E2161C /* PayutilsViewController.swift */; };
@@ -73,7 +72,6 @@
 		91DCF17425739A49002C8E33 /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		91DCF17925739B4B002C8E33 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		91E660B22575208B00E2161C /* AccountSummryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSummryCell.swift; sourceTree = "<group>"; };
-		91E660B32575208B00E2161C /* BankingOptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankingOptionsController.swift; sourceTree = "<group>"; };
 		91E660B42575208B00E2161C /* AccountSummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountSummaryView.swift; sourceTree = "<group>"; };
 		91E660B52575208B00E2161C /* DepositViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepositViewController.swift; sourceTree = "<group>"; };
 		91E660BD2575272B00E2161C /* PayutilsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayutilsViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +131,6 @@
 			children = (
 				91E660B42575208B00E2161C /* AccountSummaryView.swift */,
 				91E660B22575208B00E2161C /* AccountSummryCell.swift */,
-				91E660B32575208B00E2161C /* BankingOptionsController.swift */,
 				91E660B52575208B00E2161C /* DepositViewController.swift */,
 				9167D67D256F668600B3C21B /* AppDelegate.swift */,
 				9167D67F256F668600B3C21B /* SceneDelegate.swift */,
@@ -325,7 +322,6 @@
 				91DCF17025737E53002C8E33 /* FileReader.swift in Sources */,
 				9167D67E256F668600B3C21B /* AppDelegate.swift in Sources */,
 				91DCF15B2573714D002C8E33 /* AccountLogin.swift in Sources */,
-				91E660B72575208B00E2161C /* BankingOptionsController.swift in Sources */,
 				9167D680256F668600B3C21B /* SceneDelegate.swift in Sources */,
 				91DCF16B25737A0C002C8E33 /* Helper.swift in Sources */,
 				91DCF17525739A49002C8E33 /* LoggedInViewController.swift in Sources */,

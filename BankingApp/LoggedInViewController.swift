@@ -7,6 +7,7 @@
 
 import UIKit
 
+// this Class has methods for segeu function only
 class LoggedInViewController: UIViewController {
 
     
