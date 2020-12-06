@@ -41,6 +41,10 @@ class DepositViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     @IBAction func buttonClick(_ sender: Any) {
           
         var amountVal: Double = 0;
+        if amount.text == "" {
+            return AlertManager.showAlert(title: "Deposit Amount", msg: "Amount is empty", sender: self)
+        }
+        else{
         do {
             amountVal = try Helpers.readDouble(field: amount)
         }catch {
@@ -49,7 +53,7 @@ class DepositViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         let accNum = accounts[accountNumbers.selectedRow(inComponent: 0)].accountNo;
         let msg = BankAccounts.depositMoney(accNum: accNum, amount: amountVal);
-        AlertManager.showAlert(title: "Deposit Amount", msg: msg, sender: self)
+            AlertManager.showAlert(title: "Deposit Amount", msg: msg, sender: self)}
         
     }
     

@@ -20,8 +20,12 @@ class UpdatePeronalsViewController: UIViewController {
     }
     
     @IBAction func update(_ sender: Any) {
+        if name.text == "" || contact.text == "" {
+            AlertManager.showAlert(title: "Update Details", msg: "All fields are mandatory", sender: self)
+        }
+        else{
         let msg = BankAccounts.updateDetails(name: name.text!, contact: contact.text!)
-        AlertManager.showAlert(title: "Update Details", msg: msg, sender: self)
+            AlertManager.showAlert(title: "Update Details", msg: msg, sender: self)}
     }
     @IBOutlet weak var name: UITextField!
     

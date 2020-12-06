@@ -52,6 +52,10 @@ class PayutilsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         let accountNum = accounts[accountNumbers.selectedRow(inComponent: 0)].accountNo;
         var amountVal: Double = 0;
+        if amount.text == ""{
+            return AlertManager.showAlert(title: "Pay Utilities", msg: "Amount is empty", sender: self)
+        }
+        else{
         do {
             amountVal = try Helpers.readDouble(field: amount)
         }catch {
@@ -62,7 +66,7 @@ class PayutilsViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let utilityName = utilities[utilitiesPicker.selectedRow(inComponent: 0)];
         let msg = BankAccounts.payUtility(acc: accountNum, util: utilityName, amount: amountVal)
         
-        AlertManager.showAlert(title: "Pay Utilities", msg: msg, sender: self)
+            AlertManager.showAlert(title: "Pay Utilities", msg: msg, sender: self)}
         
     }
     

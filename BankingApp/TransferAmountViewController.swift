@@ -42,9 +42,19 @@ class TransferAmountViewController: UIViewController, UIPickerViewDelegate, UIPi
     
     
     @IBAction func transferMoney(_ sender: Any) {
-        
-        let toAccount = Int(destAccount.text ?? "0")!
+        var toAccount:Int = 0 ;
+        do {
+            
+            toAccount = try Helpers.readInt(field: destAccount)
+        }catch {
+            return AlertManager.showAlert(title: "Pay Utilities", msg: "Invalid Account number Entered", sender: self)
+        }
         var amountVal: Double = 0;
+        if amount.text == "" || destAccount.text == "" {
+            return AlertManager.showAlert(title: "Pay Utilities", msg: "All fields are mandatory", sender: self)
+        }
+        else{
+        
         do {
             amountVal = try Helpers.readDouble(field: amount)
         }catch {
@@ -54,7 +64,7 @@ class TransferAmountViewController: UIViewController, UIPickerViewDelegate, UIPi
         print(fromAccount, "fromAcc");
         let msg = BankAccounts.transferAmount(accNum1: fromAccount, accNum2: toAccount, amount: amountVal)
         AlertManager.showAlert(title: "TransferAmount", msg: msg, sender: self);
-        
+        }
     }
     
     

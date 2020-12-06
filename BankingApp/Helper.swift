@@ -10,6 +10,9 @@ import UIKit
 enum ReadDouble: Error {
     case InvalidNumberEntered
 }
+enum ReadInt: Error {
+    case InvalidNumberEntered
+}
 
 //Helper class contains the common methods thats used across the application to avoid redundant code
 class Helpers {
@@ -50,6 +53,16 @@ class Helpers {
         
         guard val != nil else {
             throw ReadDouble.InvalidNumberEntered
+        }
+        
+        return val!;
+        
+    }
+    static func readInt(field: UITextField!) throws  ->  Int {
+        let val = Int(field.text!);
+        
+        guard val != nil else {
+            throw ReadInt.InvalidNumberEntered
         }
         
         return val!;
